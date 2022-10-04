@@ -27,7 +27,7 @@ def auth_error(status):
 def BCVRate():
     try:
         # Try to retrieve data from source.
-        r = requests.get(URL)
+        r = requests.get(URL, verify=False)
 
     except:
         # In case of failure, return error response.
